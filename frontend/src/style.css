@@ -1,0 +1,1277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:
+        "Noto Sans Bengali",
+        "SolaimanLipi",
+        Arial,
+        sans-serif;
+
+    background: #f5f7f6;
+
+    color: #111;
+
+    line-height: 1.6;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+#root {
+    min-height: 100vh;
+}
+
+
+.app {
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.site-container {
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+}
+
+
+/* ========================================
+   TOP BAR
+======================================== */
+
+.top-bar {
+    background: #006b3c;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+.top-bar-inner {
+    min-height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.top-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+}
+
+
+.top-links span {
+    opacity: 0.95;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    background: white;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.header-inner {
+    min-height: 125px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.logo-link {
+    display: inline-flex;
+
+    align-items: center;
+}
+
+
+.main-logo {
+    width: 310px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* ========================================
+   SEARCH
+======================================== */
+
+.search-box {
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+
+.search-box input {
+    width: 210px;
+
+    border: none;
+
+    outline: none;
+
+    padding: 10px 12px;
+
+    font-size: 14px;
+}
+
+
+.search-box button {
+    border: none;
+
+    background: #006b3c;
+
+    color: white;
+
+    padding: 10px 14px;
+}
+
+
+/* ========================================
+   SUBSCRIBE BUTTON
+======================================== */
+
+.subscribe-button {
+    border: none;
+
+    background: #e21b23;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.subscribe-button:hover {
+    background: #b9151b;
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   ADMIN BUTTON
+======================================== */
+
+.admin-button {
+    background: #006b3c;
+
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.admin-button:hover {
+    background: #004f2d;
+}
+
+
+/* ========================================
+   MAIN NAVIGATION
+======================================== */
+
+.main-nav {
+    background: #005c36;
+
+    color: white;
+}
+
+
+.nav-inner {
+    display: flex;
+
+    align-items: center;
+
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+}
+
+
+.nav-item,
+.home-button {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 14px 17px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+
+.nav-item:hover,
+.home-button:hover {
+    background: #e21b23;
+}
+
+
+.nav-item.active,
+.home-button.active {
+    background: #e21b23;
+}
+
+
+.home-button {
+    font-size: 18px;
+}
+
+
+/* ========================================
+   NEWS PAGE
+======================================== */
+
+.news-page {
+    padding-top: 30px;
+
+    padding-bottom: 60px;
+}
+
+
+.page-title {
+    margin-bottom: 22px;
+
+    border-left: 5px solid #e21b23;
+
+    padding-left: 12px;
+}
+
+
+.page-title h1 {
+    color: #006b3c;
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   NEWS GRID
+======================================== */
+
+.news-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.news-card {
+    background: white;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+
+.news-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 16px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+.news-image {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.news-content {
+    padding: 16px;
+}
+
+
+.news-category {
+    display: inline-block;
+
+    background: #e21b23;
+
+    color: white;
+
+    padding: 4px 10px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.news-title {
+    font-size: 21px;
+
+    line-height: 1.5;
+
+    margin-top: 10px;
+
+    margin-bottom: 8px;
+
+    color: #111;
+
+    font-weight: 800;
+}
+
+
+.news-description {
+    color: #555;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+
+.news-video {
+    width: 100%;
+
+    margin-top: 14px;
+
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   LOADING / ERROR
+======================================== */
+
+.loading-box,
+.error-box,
+.empty-box {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+
+.loading-box {
+    color: #555;
+
+    font-size: 20px;
+}
+
+
+.error-box {
+    color: #d00;
+}
+
+
+.empty-box {
+    color: #777;
+}
+
+
+/* ========================================
+   SUBSCRIBE MODAL
+======================================== */
+
+.subscribe-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+
+.subscribe-modal {
+    width: 100%;
+
+    max-width: 450px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 35px 30px;
+
+    position: relative;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+.subscribe-close {
+    position: absolute;
+
+    right: 15px;
+
+    top: 10px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    background: #f1f1f1;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    color: #555;
+}
+
+
+.subscribe-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.subscribe-modal h2 {
+    color: #006b3c;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+.subscribe-modal p {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+
+.subscribe-modal form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.subscribe-modal input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+.subscribe-modal input:focus {
+    border-color: #006b3c;
+}
+
+
+.subscribe-modal form button {
+    border: none;
+
+    background: #e21b23;
+
+    color: white;
+
+    padding: 13px;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    font-size: 15px;
+}
+
+
+.subscribe-modal form button:hover {
+    background: #0c8a4b;
+}
+
+
+.subscribe-modal form button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+.subscribe-message {
+    margin-top: 15px;
+
+    font-weight: 700;
+
+    color: #006b3c;
+}
+
+
+/* ========================================
+   ADMIN
+======================================== */
+
+.admin-page {
+    max-width: 1250px;
+
+    margin: 30px auto;
+
+    padding: 0 20px 60px;
+}
+
+
+.admin-dashboard-header {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.admin-dashboard-header h1 {
+    color: #006b3c;
+
+    font-size: 28px;
+}
+
+
+.admin-dashboard-header p {
+    color: #777;
+}
+
+
+/* ========================================
+   STATISTICS
+======================================== */
+
+.statistics-section {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 22px;
+
+    margin-bottom: 25px;
+}
+
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.section-heading h2 {
+    color: #006b3c;
+
+    font-size: 23px;
+}
+
+
+.refresh-button {
+    border: none;
+
+    background: #006b3c;
+
+    color: white;
+
+    padding: 9px 15px;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+}
+
+
+.refresh-button:hover {
+    background: #004f2d;
+}
+
+
+.stats-loading {
+    padding: 10px;
+
+    text-align: center;
+
+    color: #666;
+}
+
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+
+.stat-card {
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    background: #fafafa;
+}
+
+
+.stat-icon {
+    font-size: 30px;
+}
+
+
+.stat-number {
+    color: #006b3c;
+
+    font-size: 27px;
+
+    font-weight: 800;
+}
+
+
+.stat-label {
+    color: #666;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   ADMIN CONTENT
+======================================== */
+
+.admin-content-grid {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr;
+
+    gap: 25px;
+}
+
+
+.admin-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.admin-title {
+    color: #006b3c;
+
+    border-bottom:
+        2px solid #006b3c;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 20px;
+
+    font-size: 21px;
+}
+
+
+.red-title {
+    color: #e21b23;
+
+    border-color: #e21b23;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    padding: 11px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: white;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #006b3c;
+}
+
+
+.form-group textarea {
+    min-height: 180px;
+
+    resize: vertical;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn {
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 11px 18px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+.btn-green {
+    background: #006b3c;
+
+    color: white;
+}
+
+
+.btn-green:hover {
+    background: #004f2d;
+}
+
+
+.btn-red {
+    background: #e21b23;
+
+    color: white;
+}
+
+
+.btn-red:hover {
+    background: #b9151b;
+}
+
+
+.btn-blue {
+    background: #1565c0;
+
+    color: white;
+}
+
+
+.btn-blue:hover {
+    background: #0d47a1;
+}
+
+
+/* ========================================
+   ADMIN LOGIN
+======================================== */
+
+.admin-login-page {
+    min-height: 70vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+
+.admin-login-card {
+    width: 100%;
+
+    max-width: 430px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.1);
+}
+
+
+.admin-login-card h2 {
+    text-align: center;
+
+    color: #006b3c;
+
+    margin-bottom: 25px;
+}
+
+
+.admin-login-btn {
+    width: 100%;
+}
+
+
+/* ========================================
+   SUBSCRIBER LIST
+======================================== */
+
+.admin-divider {
+    border: none;
+
+    border-top: 1px solid #ddd;
+
+    margin: 25px 0;
+}
+
+
+.subscriber-list {
+    margin-top: 15px;
+
+    max-height: 400px;
+
+    overflow-y: auto;
+}
+
+
+.subscriber-item {
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.subscriber-item strong {
+    color: #222;
+
+    word-break: break-word;
+}
+
+
+.subscriber-item small {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .header-inner {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding-top: 20px;
+
+        padding-bottom: 20px;
+    }
+
+
+    .header-right {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .admin-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .news-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .site-container {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .top-bar-inner {
+        min-height: auto;
+
+        padding-top: 8px;
+
+        padding-bottom: 8px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .top-links {
+        width: 100%;
+
+        gap: 12px;
+    }
+
+
+    .main-logo {
+        width: 230px;
+    }
+
+
+    .header-right {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .search-box {
+        width: 100%;
+    }
+
+
+    .search-box input {
+        width: 100%;
+    }
+
+
+    .subscribe-button,
+    .admin-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .nav-item,
+    .home-button {
+        padding: 12px;
+    }
+
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .news-image {
+        height: 200px;
+    }
+
+
+    .page-title h1 {
+        font-size: 23px;
+    }
+
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .admin-page {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .admin-dashboard-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .subscribe-modal {
+        padding: 30px 20px;
+    }
+
+}
+/* ========================================
+   DATE & TIME
+======================================== */
+
+.top-date,
+.top-time {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.top-time {
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   TOP BAR RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .top-bar-inner {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .top-date {
+        font-size: 13px;
+    }
+
+    .top-time {
+        font-size: 13px;
+        margin-left: 0;
+    }
+
+    .top-links {
+        display: none;
+    }
+
+}

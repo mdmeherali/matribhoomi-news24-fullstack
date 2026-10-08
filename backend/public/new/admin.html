@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মাতৃভূমি নিউজ ২৪ - অ্যাডমিন প্যানেল</title>
+        <!-- এক্সটার্নাল স্ক্রিপ্ট লিংক -->
+    
+
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 30px auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h2 { color: #006a4e; border-bottom: 2px solid #f42a41; padding-bottom: 8px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input[type="text"], textarea, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background: #006a4e; color: white; border: none; padding: 12px 20px; font-size: 16px; cursor: pointer; border-radius: 4px; width: 100%; font-weight: bold; }
+        button:hover { background: #00523c; }
+        .nav-links { margin-top: 15px; text-align: center; }
+        .nav-links a { color: #f42a41; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <!-- লগইন ফর্ম (টোকেন না থাকলে দেখাবে) -->
+    <div id="login-section" class="container">
+        <h2>🔐 অ্যাডমিন লগইন</h2>
+        <!-- অন-সবমিট রিটার্ন ফলস যুক্ত করা হলো যাতে পেজ রিলোড না হয় -->
+           <form id="login-form" onsubmit="event.preventDefault();">
+
+            <div class="form-group">
+                <label>ইউজারনেম</label>
+                <input type="text" id="login-username" required placeholder="meherali">
+                
+            </div>
+            <div class="form-group">
+                <label>পাসওয়ার্ড</label>
+                <input type="password" id="login-password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required placeholder="••••••••">
+            </div>
+            <button type="submit">লগইন করুন</button>
+        </form>
+    </div>
+
+    <!-- নিউজ পোস্ট করার প্যানেল (লগইন থাকলে দেখাবে) -->
+    <div id="dashboard-section" class="container" style="display: none;">
+        <h2>📰 নতুন খবর প্রকাশ করুন</h2>
+        <form id="news-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>খবরের শিরোনাম</label>
+                <input type="text" id="title" required placeholder="শিরোনাম লিখুন">
+            </div>
+            <div class="form-group">
+                <label>ক্যাটাগরি</label>
+                <select id="category">
+                    <option value="জাতীয়">জাতীয়</option>
+                    <option value="রাজনীতি">রাজনীতি</option>
+                    <option value="আন্তর্জাতিক">আন্তর্জাতিক</option>
+                    <option value="খেলাধুলা">খেলাধুলা</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>বিস্তারিত খবর</label>
+                <textarea id="content" rows="6" required placeholder="খবরের ভেতরের অংশ লিখুন..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>ছবি আপলোড (Image)</label>
+                <input type="file" id="image" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label>ভিডিও আপলোড (Video - ঐচ্ছিক)</label>
+                <input type="file" id="video" accept="video/*">
+            </div>
+            <button type="submit">খবরটি পাবলিশ করুন</button>
+        </form>
+                <!-- পাসওয়ার্ড পরিবর্তন করার মডিউল (নিরাপত্তা গেটওয়ে) -->
+        <div style="margin-top: 35px; border-top: 2px dashed #ccc; padding-top: 20px;">
+            <h3 style="color: #f42a41;">🔒 অ্যাডমিন পাসওয়ার্ড পরিবর্তন করুন</h3>
+            <form id="change-password-form">
+                <div class="form-group">
+                    <label>বর্তমান পাসওয়ার্ড</label>
+                    <input type="password" id="old-password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                    <label>নতুন শক্তিশালী পাসওয়ার্ড</label>
+                    <input type="password" id="new-password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required placeholder="••••••••">
+                </div>
+                <button type="submit" style="background: #f42a41;">পাসওয়ার্ড আপডেট করুন</button>
+            </form>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" id="logout-btn">🔴 লগআউট করুন</a>
+        </div>
+    </div>
+
+    <!-- স্ক্রিপ্ট হ্যান্ডলার -->
+<script src="admin.js"></script>
+
+
+</body>
+</html>
