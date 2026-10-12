@@ -142,7 +142,7 @@ const Navbar = ({
 
 
             const response = await fetch(
-                "http://localhost:5001/api/stats/subscribe",
+                "http://localhost:https://matribhoomi-news24-fullstack.onrender.com/api/stats/subscribe",
                 {
                     method: "POST",
 
