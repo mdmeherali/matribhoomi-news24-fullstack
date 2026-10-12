@@ -9,7 +9,7 @@ import {
 
 
 const API_URL =
-    "http://localhost:https://matribhoomi-news24-fullstack.onrender.com/api";
+    "://matribhoomi-news24-fullstack.onrender.com/api";
 
 
 const Home = ({
@@ -244,7 +244,7 @@ const Home = ({
 
                                             <img
                                                 src={
-                                                    `http://localhost:https://matribhoomi-news24-fullstack.onrender.com${news.image_url}`
+                                                    `://matribhoomi-news24-fullstack.onrender.com${news.image_url}`
                                                 }
 
                                                 alt={
@@ -311,7 +311,7 @@ const Home = ({
 
                                                     <source
                                                         src={
-                                                            `http://localhost:https://matribhoomi-news24-fullstack.onrender.com${news.video_url}`
+                                                            `://matribhoomi-news24-fullstack.onrender.com${news.video_url}`
                                                         }
 
                                                         type="video/mp4"
