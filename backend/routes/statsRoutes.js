@@ -163,7 +163,7 @@ router.post("/subscribe", async (req, res) => {
 
         // Email format check
         const emailRegex =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+             /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
         if (!emailRegex.test(email)) {

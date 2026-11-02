@@ -7,9 +7,11 @@ import {
     useNavigate
 } from "react-router-dom";
 
-
 const API_URL =
-    "://matribhoomi-news24-fullstack.onrender.com/api";
+    "https://matribhoomi-news24-fullstack.onrender.com/api";
+
+const SERVER_URL =
+    "https://matribhoomi-news24-fullstack.onrender.com";
 
 
 const Home = ({
@@ -240,21 +242,16 @@ const Home = ({
 
                                         {/* IMAGE */}
 
-                                        {news.image_url && (
 
-                                            <img
-                                                src={
-                                                    `://matribhoomi-news24-fullstack.onrender.com${news.image_url}`
-                                                }
+                                            {news.image_url && (
 
-                                                alt={
-                                                    news.title
-                                                }
+                                                <img
+                                                    src={`${SERVER_URL}${news.image_url}`}
+                                                    alt={news.title}
+                                                    className="news-image"
+                                                />
 
-                                                className="news-image"
-                                            />
-
-                                        )}
+                                            )}
 
 
                                         <div className="news-content">
@@ -309,13 +306,10 @@ const Home = ({
                                                     }
                                                 >
 
-                                                    <source
-                                                        src={
-                                                            `://matribhoomi-news24-fullstack.onrender.com${news.video_url}`
-                                                        }
-
-                                                        type="video/mp4"
-                                                    />
+                                                   <source
+                                                            src={`${SERVER_URL}${news.video_url}`}
+                                                            type="video/mp4"
+                                                        />
 
                                                     আপনার ব্রাউজার
                                                     ভিডিও সাপোর্ট

@@ -81,9 +81,9 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <p>📍 বাংলাদেশ</p>
               <p>📞 +880 1734138429</p>
-              <p>✉️ infonews24.com</p>
+              <p>✉️ matribhoominews24@gmail.com</p>
             </div>
-
+              
             {/* Social */}
             <div className="flex gap-3 mt-5">
               <a

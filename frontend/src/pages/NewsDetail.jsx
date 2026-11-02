@@ -13,10 +13,10 @@ import NewsInteractions
 
 
 const API_URL =
-    "://matribhoomi-news24-fullstack.onrender.com/api";
+    "https://matribhoomi-news24-fullstack.onrender.com/api";
 
 const SERVER_URL =
-    "://matribhoomi-news24-fullstack.onrender.com";
+    "https://matribhoomi-news24-fullstack.onrender.com";
 
 
 const NewsDetail = () => {

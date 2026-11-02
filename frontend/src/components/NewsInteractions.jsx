@@ -5,7 +5,7 @@ import React, {
 
 
 const API_URL =
-    "://matribhoomi-news24-fullstack.onrender.com/api";
+    "https://matribhoomi-news24-fullstack.onrender.com/api";
 
 
 const NewsInteractions = ({
